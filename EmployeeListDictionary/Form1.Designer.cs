@@ -88,6 +88,7 @@ namespace EmployeeListDictionary
             this.btnAdd.TabIndex = 5;
             this.btnAdd.Text = "Add New Employee";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnSave
             // 
@@ -97,6 +98,7 @@ namespace EmployeeListDictionary
             this.btnSave.TabIndex = 6;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // Form1
             // 

@@ -48,5 +48,36 @@ namespace EmployeeListDictionary
             txtEmpName.Text = lstNames.Text;
             txtEmpID.Text = lstNames.SelectedValue.ToString();
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            //Enable the Save button and clear out the current contents of the text boxes
+            btnSave.Enabled = true;
+            btnAdd.Enabled = false;
+            txtEmpID.Text = "";
+            txtEmpName.Text = "";
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            //Verify the input information is not empty
+            if(txtEmpID.Text != "" && txtEmpName.Text != "")
+            {
+                //Disable the Save button and Enable the Add button
+                btnSave.Enabled = false;
+                btnAdd.Enabled = true;
+
+                //Add the new employee to the dictionary
+                dEmployee.Add(int.Parse(txtEmpID.Text), txtEmpName.Text);
+
+                //Update the list box with the new employees information
+                lstNames.DataSource = new BindingSource(dEmployee, null);
+
+            }
+            else
+            {
+                MessageBox.Show("You must enter both an Employee ID and Employee Name");
+            }
+        }
     }
 }
