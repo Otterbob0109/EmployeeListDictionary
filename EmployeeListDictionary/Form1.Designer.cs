@@ -46,6 +46,7 @@ namespace EmployeeListDictionary
             this.lstNames.Name = "lstNames";
             this.lstNames.Size = new System.Drawing.Size(252, 429);
             this.lstNames.TabIndex = 0;
+            this.lstNames.SelectedIndexChanged += new System.EventHandler(this.lstNames_SelectedIndexChanged);
             // 
             // label1
             // 

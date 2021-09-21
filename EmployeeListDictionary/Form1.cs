@@ -42,5 +42,11 @@ namespace EmployeeListDictionary
             AddEmployeesFromDictionary();
             btnSave.Enabled = false;
         }
+
+        private void lstNames_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtEmpName.Text = lstNames.Text;
+            txtEmpID.Text = lstNames.SelectedValue.ToString();
+        }
     }
 }
