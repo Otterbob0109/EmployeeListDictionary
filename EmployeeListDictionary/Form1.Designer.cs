@@ -111,6 +111,7 @@ namespace EmployeeListDictionary
             this.Controls.Add(this.lstNames);
             this.Name = "Form1";
             this.Text = "Employee List";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
